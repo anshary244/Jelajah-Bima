@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0d1b2a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Bingkai Utama Rasio 16:9 sesuai Desain Canva */
+.slide-container {
+    position: relative;
+    width: 100%;
+    max-width: 1120px;
+    aspect-ratio: 16 / 9;
+    background-color: #000;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    animation: fadeIn 0.35s ease;
+}
+
+.slide.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0.7; }
+    to { opacity: 1; }
+}
+
+.slide img.bg-slide {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    display: block;
+    user-select: none;
+}
+
+/* Tombol Navigasi Teks (Berikutnya & Kembali) */
+.btn-nav {
+    position: absolute;
+    padding: 10px 24px;
+    background: linear-gradient(135deg, #f39c12, #d35400);
+    color: #ffffff;
+    border: 3px solid #ffffff;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    transition: all 0.2s ease;
+    z-index: 30;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.btn-nav:hover {
+    transform: scale(1.07);
+    background: linear-gradient(135deg, #f1c40f, #e67e22);
+}
+
+.bawah-kanan {
+    bottom: 22px;
+    right: 26px;
+}
+
+.bawah-kiri {
+    bottom: 22px;
+    left: 26px;
+}
+
+/* Area Klik Transparan (Hotspot) */
+.hotspot {
+    position: absolute;
+    cursor: pointer;
+    z-index: 20;
+    border-radius: 14px;
+    transition: all 0.2s ease;
+}
+
+.hotspot:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+.btn-mulai {
+    top: 75.5%;
+    left: 36.5%;
+    width: 27%;
+    height: 11.5%;
+    border-radius: 50px;
+}
+
+/* Area Klik Ikon Rumah di Pojok Kanan Atas */
+.hotspot-home {
+    position: absolute;
+    top: 2.5%;
+    right: 1.5%;
+    width: 6.5%;
+    height: 11.5%;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 30;
+    transition: all 0.2s ease;
+}
+
+.hotspot-home.home-kecil {
+    top: 3%;
+    right: 1.2%;
+    width: 4.5%;
+    height: 8%;
+}
+
+.hotspot-home:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+}
+
+/* Video Layar Penuh Sesuai Ukuran Kanvas Slide */
+.video-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    background-color: #0f70d7;
+    z-index: 15;
+}
+
+.video-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+

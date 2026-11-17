@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jelajah Bima - Kelompok 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="slide-container">
+
+    <!-- SLIDE 1: Nama Anggota Kelompok -> Tombol Berikutnya ke Slide 2 -->
+    <div id="slide1" class="slide active">
+        <img src="images/1.jpg" class="bg-slide" alt="Slide 1 - Nama Anggota">
+        <button class="btn-nav bawah-kanan" onclick="goToSlide(2)">Berikutnya &rarr;</button>
+    </div>
+
+    <!-- SLIDE 2: Jelajah Bima -> Klik 'MULAI JELAJAH' ke Slide 3 -->
+    <div id="slide2" class="slide">
+        <img src="images/2.jpg" class="bg-slide" alt="Slide 2 - Jelajah Bima">
+        <div class="hotspot-home home-kecil" onclick="goToSlide(1)" title="Kembali ke Slide 1"></div>
+        <div class="hotspot btn-mulai" onclick="goToSlide(3)" title="Mulai Jelajah"></div>
+    </div>
+
+    <!-- SLIDE 3: Menu Utama (4 Kartu Menu) -->
+    <div id="slide3" class="slide">
+        <img src="images/3.jpg" class="bg-slide" alt="Slide 3 - Menu Utama">
+        <div class="hotspot-home home-kecil" onclick="goToSlide(1)" title="Kembali ke Slide 1"></div>
+        
+        <div class="hotspot" style="top: 25%; left: 7.5%; width: 20.5%; height: 46%;" onclick="goToSlide(4)" title="Tentang Bima"></div>
+        <div class="hotspot" style="top: 25%; left: 29.2%; width: 20.5%; height: 46%;" onclick="goToSlide(5)" title="Destinasi Wisata"></div>
+        <div class="hotspot" style="top: 25%; left: 50.8%; width: 20.5%; height: 46%;" onclick="goToSlide(14)" title="Produk Lokal Bima"></div>
+        <div class="hotspot" style="top: 25%; left: 72.3%; width: 20.5%; height: 46%;" onclick="goToSlide(21)" title="Video"></div>
+    </div>
+
+    <!-- SLIDE 4: Mengenal Bima -> Tombol Kembali ke Slide 3 -->
+    <div id="slide4" class="slide">
+        <img src="images/4.jpg" class="bg-slide" alt="Slide 4 - Tentang Bima">
+        <div class="hotspot-home" onclick="goToSlide(1)" title="Kembali ke Slide 1"></div>
+        <button class="btn-nav bawah-kiri" onclick="goToSlide(3)">&larr; Kembali</button>
+    </div>
+
+    <!-- SLIDE 5: Destinasi Wisata Bima (8 Gambar) -> Tombol Kembali ke Slide 3 -->
+    <div id="slide5" class="slide">
+        <img src="images/5.jpg" class="bg-slide" alt="Slide 5 - Destinasi Wisata">
+        <div class="hotspot-home" onclick="goToSlide(1)" title="Kembali ke Slide 1"></div>
+        <button class="btn-nav bawah-kiri" onclick="goToSlide(3)">&larr; Kembali</button>
+
+        <!-- Baris Atas -->
+        <div class="hotspot" style="top: 19%; left: 6%; width: 21.5%; height: 32%;" onclick="goToSlide(6)" title="Pantai Lariti"></div>
+        <div class="hotspot" style="top: 19%; left: 28.5%; width: 21.5%; height: 32%;" onclick="goToSlide(7)" title="Pulau Kelapa"></div>
+        <div class="hotspot" style="top: 19%; left: 51%; width: 21.5%; height: 32%;" onclick="goToSlide(8)" title="Air Terjun Tambora"></div>
+        <div class="hotspot" style="top: 19%; left: 73.5%; width: 21.5%; height: 32%;" onclick="goToSlide(9)" title="Padang Savana"></div>
+
+        <!-- Baris Bawah -->
+        <div class="hotspot" style="top: 52.5%; left: 6%; width: 21.5%; height: 32%;" onclick="goToSlide(10)" title="Pulau Ular"></div>
+        <div class="hotspot" style="top: 52.5%; left: 28.5%; width: 21.5%; height: 32%;" onclick="goToSlide(11)" title="Pantai Rontu"></div>
+        <div class="hotspot" style="top: 52.5%; left: 51%; width: 21.5%; height: 32%;" onclick="goToSlide(12)" title="Istana Asi Mbojo"></div>
+        <div class="hotspot" style="top: 52.5%; left: 73.5%; width: 21.5%; height: 32%;" onclick="goToSlide(13)" title="Uma Lengge Wawo"></div>
+    </div>
+
+    <!-- SLIDE 6 - 13: Detail Destinasi Wisata -> Tombol Kembali ke Slide 5 -->
+    <div id="slide6" class="slide">
+        <img src="images/6.jpg" class="bg-slide" alt="Slide 6 - Pantai Lariti">
+        <button class="btn-nav bawah-kiri" onclick="goToSlide(5)">&larr; Kembali</button>
+    </div>
+    <div id="slide7" class="slide">
+        <img src="images/7.jpg" class="bg-slide" alt="Slide 7 - Pulau Kelapa">
+        <button class="btn-nav bawah-kiri" onclick="goToSlide(5)">&larr; Kembali</button>
+    </div>
+    <div id="slide8" class="slide">
+        <img src="images/8.jpg" class="bg-slide" alt="Slide 8 - Air Terjun Tambora">
+        <button class="btn-nav bawah-kiri" onclick="goToSlide(5)">&larr; Kembali</button>
+    </div>
+    <div id="slide9" class="slide">
+        <img src="images/9.jpg" class="bg-slide" alt="Slide 9 - Padang Savana">
+        <button class="btn-nav bawah-kiri" onclick="goToSlide(5)">&larr; Kembali</button>
+    </div>
+    <div id="slide10" class="slide">
+        <img src="images/10.jpg" class="bg-slide" alt="Slide 10 - Pulau Ular">
+        <button class="btn-nav bawah-kiri" onclick="goToSlide(5)">&larr; Kembali</button>
+    </div>
+    <div id="slide11" class="slide">
+        <img src="images/11.jpg" class="bg-slide" alt="Slide 11 - Pantai Rontu">
+        <button class="btn-nav bawah-kiri" onclick="goToSlide(5)">&larr; Kembali</button>
+    </div>
+    <div id="slide12" class="slide">
+        <img src="images/12.jpg" class="bg-slide" alt="Slide 12 - Istana Asi Mbojo">
+        <button class="btn-nav bawah-kiri" onclick="goToSlide(5)">&larr; Kembali</button>
+    </div>
+    <div id="slide13" class="slide">
+        <img src="images/13.jpg" class="bg-slide" alt="Slide 13 - Uma Lengge Wawo">
+        <button class="btn-nav bawah-kiri" onclick="goToSlide(5)">&larr; Kembali</button>
+    </div>
+
+    <!-- SLIDE 14: Produk Lokal Bima (6 Gambar) -> Tombol Kembali ke Slide 3 -->
+    <div id="slide14" class="slide">
+        <img src="images/14.jpg" class="bg-slide" alt="Slide 14 - Produk Lokal Bima">
+        <div class="hotspot-home" onclick="goToSlide(1)" title="Kembali ke Slide 1"></div>
+        <button class="btn-nav bawah-kiri" onclick="goToSlide(3)">&larr; Kembali</button>
+
+        <!-- Baris Atas -->
+        <div class="hotspot" style="top: 19.5%; left: 6%; width: 28.5%; height: 31.5%;" onclick="goToSlide(15)" title="Tenun Mbojo"></div>
+        <div class="hotspot" style="top: 19.5%; left: 35.8%; width: 28.5%; height: 31.5%;" onclick="goToSlide(16)" title="Susu Kuda Liar"></div>
+        <div class="hotspot" style="top: 19.5%; left: 65.5%; width: 28.5%; height: 31.5%;" onclick="goToSlide(17)" title="Madu Hutan Bima"></div>
+
+        <!-- Baris Bawah -->
+        <div class="hotspot" style="top: 52.5%; left: 6%; width: 28.5%; height: 31.5%;" onclick="goToSlide(18)" title="Bawang Merah Bima"></div>
+        <div class="hotspot" style="top: 52.5%; left: 35.8%; width: 28.5%; height: 31.5%;" onclick="goToSlide(19)" title="Pangaha Bunga"></div>
+        <div class="hotspot" style="top: 52.5%; left: 65.5%; width: 28.5%; height: 31.5%;" onclick="goToSlide(20)" title="Minyak Oi Bima"></div>
+    </div>
+
+    <!-- SLIDE 15 - 20: Detail Produk Lokal Bima -> Tombol Kembali ke Slide 14 -->
+    <div id="slide15" class="slide">
+        <img src="images/15.jpg" class="bg-slide" alt="Slide 15 - Tenun Mbojo">
+        <div class="hotspot-home" onclick="goToSlide(1)" title="Kembali ke Slide 1"></div>
+        <button class="btn-nav bawah-kiri" onclick="goToSlide(14)">&larr; Kembali</button>
+    </div>
+    <div id="slide16" class="slide">
+        <img src="images/16.jpg" class="bg-slide" alt="Slide 16 - Susu Kuda Liar">
+        <div class="hotspot-home" onclick="goToSlide(1)" title="Kembali ke Slide 1"></div>
+        <button class="btn-nav bawah-kiri" onclick="goToSlide(14)">&larr; Kembali</button>
+    </div>
+    <div id="slide17" class="slide">
+        <img src="images/17.jpg" class="bg-slide" alt="Slide 17 - Madu Hutan Bima">
+        <div class="hotspot-home" onclick="goToSlide(1)" title="Kembali ke Slide 1"></div>
+        <button class="btn-nav bawah-kiri" onclick="goToSlide(14)">&larr; Kembali</button>
+    </div>
+    <div id="slide18" class="slide">
+        <img src="images/18.jpg" class="bg-slide" alt="Slide 18 - Bawang Merah Bima">
+        <div class="hotspot-home" onclick="goToSlide(1)" title="Kembali ke Slide 1"></div>
+        <button class="btn-nav bawah-kiri" onclick="goToSlide(14)">&larr; Kembali</button>
+    </div>
+    <div id="slide19" class="slide">
+        <img src="images/19.jpg" class="bg-slide" alt="Slide 19 - Pangaha Bunga">
+        <div class="hotspot-home" onclick="goToSlide(1)" title="Kembali ke Slide 1"></div>
+        <button class="btn-nav bawah-kiri" onclick="goToSlide(14)">&larr; Kembali</button>
+    </div>
+    <div id="slide20" class="slide">
+        <img src="images/20.jpg" class="bg-slide" alt="Slide 20 - Minyak Oi Bima">
+        <div class="hotspot-home" onclick="goToSlide(1)" title="Kembali ke Slide 1"></div>
+        <button class="btn-nav bawah-kiri" onclick="goToSlide(14)">&larr; Kembali</button>
+    </div>
+
+    <!-- SLIDE 21: Halaman Video -> Tombol Berikutnya ke Slide 22 -->
+    <div id="slide21" class="slide">
+        <img src="images/21.jpg" class="bg-slide" alt="Slide 21 - Video">
+        <div class="video-box">
+            <video id="video-bima" width="100%" height="100%" controls>
+                <source src="images/video.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="hotspot-home" onclick="goToSlide(1)" title="Kembali ke Slide 1"></div>
+        <button class="btn-nav bawah-kanan" onclick="goToSlide(22)">Berikutnya &rarr;</button>
+    </div>
+
+    <!-- SLIDE 22: Penutup -->
+    <div id="slide22" class="slide">
+        <img src="images/22.jpg" class="bg-slide" alt="Slide 22 - Terima Kasih">
+        <div class="hotspot-home" onclick="goToSlide(1)" title="Kembali ke Slide 1"></div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
