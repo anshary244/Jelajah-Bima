@@ -148,24 +148,29 @@ body {
     object-fit: cover;
 }
 
-/* Penyesuaian ukuran tombol navigasi khusus untuk layar HP */
+/* Ukuran tombol proporsional mengikuti lebar layar (Laptop & HP/WA) */
+.btn-nav {
+    font-size: clamp(9px, 1.4vw, 16px) !important;
+    padding: clamp(4px, 0.7vw, 10px) clamp(8px, 1.4vw, 20px) !important;
+    border-radius: 6px !important;
+    line-height: 1.2 !important;
+}
+
 @media (max-width: 768px) {
     .btn-nav {
-        font-size: 11px !important;
-        padding: 5px 10px !important;
-        border-radius: 5px !important;
+        font-size: 2.5vw !important;
+        padding: 1.2vw 2.5vw !important;
     }
 
     .bawah-kiri {
-        bottom: 10px !important;
-        left: 10px !important;
+        bottom: 2.5% !important;
+        left: 2.5% !important;
     }
 
     .bawah-kanan {
-        bottom: 10px !important;
-        right: 10px !important;
+        bottom: 2.5% !important;
+        right: 2.5% !important;
     }
 }
-
 
 
