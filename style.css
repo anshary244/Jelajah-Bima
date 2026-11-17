@@ -148,4 +148,24 @@ body {
     object-fit: cover;
 }
 
+/* Penyesuaian ukuran tombol navigasi khusus untuk layar HP */
+@media (max-width: 768px) {
+    .btn-nav {
+        font-size: 11px !important;
+        padding: 5px 10px !important;
+        border-radius: 5px !important;
+    }
+
+    .bawah-kiri {
+        bottom: 10px !important;
+        left: 10px !important;
+    }
+
+    .bawah-kanan {
+        bottom: 10px !important;
+        right: 10px !important;
+    }
+}
+
+
 
